@@ -1,0 +1,25 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#botones{
+    width: 20%;
+    padding: 3%;
+    border: black 1px solid;
+}
+
+#mas{
+    color: rgb(67, 148, 67);
+}
+#menos{
+    color: rgb(67, 148, 67);
+}
+
+.tetxto{
+    font-size: 20px;
+}
+
+
+
+
+

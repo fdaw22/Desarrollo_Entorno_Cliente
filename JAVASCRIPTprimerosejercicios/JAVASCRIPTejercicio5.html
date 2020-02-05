@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <script>
+
+            //este codigo dice el numero de pares hasta el numero pedido y nos los imprime en una tabla
+            /**
+            var n;
+            var i=0;
+            var n_pares=0;
+            
+
+            n=parseInt(prompt("Introduce un numero"));
+
+            while(i<n){
+                n_pares++;
+                i+=2;
+            }
+
+            document.write("<table border='1'>"+"<tr>"+"<td>"+"Numero de pares hasta"+n+"</td>"+"<td>"+n_pares+"</td>"+"</tr>"+"</table>");
+            */
+
+            var tabla=[];
+            var n=0;
+            var i=0;
+            var j;
+            var n_pares = 0;
+
+            n=parseInt(prompt("Introduce un numero o 0 para finalizar el programa"));
+
+            while(n != 0){
+                tabla[i]=n;
+                i++;
+                n=parseInt(prompt("Introduce un numero o 0 para finalizar el programa"));
+            }
+
+            
+            for(j=0; j<tabla.length; j++){
+                if( (tabla[j]%2)==0){
+                    n_pares++;
+                }
+            }
+            document.write("El numero de pares introducidos es:"+n_pares);
+
+        </script>
+    </body>
+
+</html>

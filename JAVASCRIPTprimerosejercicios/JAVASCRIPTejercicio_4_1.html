@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio_4_1</title>
+</head>
+<body>
+    <button onclick="generarTabla()">Generar Tabla (desordanada)</button>
+    <p id="generar" class="generar"></p>
+
+    <button onclick="ordenar()">Ordenar Tabla</button>
+    <p id="ordenar" class="ordenar"></p>
+
+    <button onclick="mayor20menor10()">Son &gt; 20 y escribe los &lt; 10</button>
+    <p id="mayor20" class="mayor20"></p>
+    <p id="menor10" class="menor10"></p>
+
+    <button onclick="mitadvalores()">Tabla mitad valores y contiene 99</button>
+    <p id="mitadvalores" class="mitadvalores"></p>
+    <p id="99" class="99"></p>
+    <script>
+        
+        var tabla = [];
+
+        function generarTabla(){
+            for(var i=0; i<100; i++){
+                tabla[i]=Math.floor(Math.random()*(100-1)+1);
+            }
+            document.getElementById('generar').innerHTML="Tabla desordenada:"+tabla;
+        }
+        
+
+        function ordenar(){
+            
+            tabla.sort(function(a,b){return a-b});
+            document.getElementById('ordenar').innerHTML="Tabla ordenada ascendentemente"+tabla;
+        }
+
+        function mayor20menor10(){
+            var tabla2=[];
+            var contador1=0;
+            var contador2=0;
+
+            for(var i=0; i<tabla.length;i++){
+                if(tabla[i]<20){
+                    contador1++;
+                }
+                else{
+                    document.getElementById('mayor20').innerHTML="NOT!(Existen numeros menores que 20)";
+                }
+                if(contador1==tabla.length){
+                    document.getElementById('mayor20').innerHTML="YES!(Todos los numeros son mayores que 20)";
+                }
+            }
+            
+            for(var i=0; i<tabla.length;i++){
+                if(tabla[i]<10){
+                    tabla2[contador2]=tabla[i];
+                    contador2++;
+                }
+            }
+            document.getElementById('menor10').innerHTML="Numeros menores que 10:"+tabla2;
+        }
+
+        function mitadvalores(){
+            var tabla3=[];
+
+            for(var i=0; i<tabla.length/2;i++){
+                tabla3[i]=tabla[Math.floor(Math.random()*(100-1)+1)];
+            }
+            document.getElementById('mitadvalores').innerHTML="Tabla con mitad de los valores:"+tabla3;
+
+            for(var j=0; j<tabla3.length;j++){
+                if(tabla3[j]==99){
+                    document.getElementById('99').innerHTML="Contiene el numero 99.";
+                }
+                else{
+                    document.getElementById('99').innerHTML="No contiene el numero 99.";
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

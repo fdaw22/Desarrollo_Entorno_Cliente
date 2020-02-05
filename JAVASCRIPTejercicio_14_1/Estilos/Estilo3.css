@@ -1,0 +1,81 @@
+@font-face{
+    font-family: "Aldo";
+    src:url(../Fuentes/Aldo\ semi-bold0.12.ttf);
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-letra);
+    
+    font-size: 2.3vh;
+    --verde-color:green;
+    --naranja-color:orange;
+    --color-letra:rgb(193, 196, 21);
+    --fuente-letra: "Aldo";
+    background-color: var(--naranja-color);
+}
+form{
+    width: 40%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color: var(--verde-color);
+    box-sizing: border-box;
+    border-radius: 20px 0 20px 0;
+}
+#fieldset1{
+    width: 100%;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    border: black 1px ;
+    color: var(--color-letra);
+}
+#fieldset2{
+    border: black 1px;
+    color: var(--color-letra);
+}
+.input{
+    width: 40%;
+    height: 15%;
+    margin: 1%;
+    font-family: "Aldo";
+    font-size: 2.1vh;
+    font-family: var(--fuente-letra);
+    color: var(--color-letra);
+    
+}
+button{
+    width: 30%;
+    margin: 1%;
+    font-family: "Aldo";
+    background-color: var(--naranja-color);
+    border-radius: 5px;
+    border: rgb(33, 61, 87) 1px solid;
+    font-size: 2.1vh;
+    color: var(--color-letra);
+    background-color: var(--verde-color);
+}

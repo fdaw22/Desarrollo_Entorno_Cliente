@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+	  <title>Felipe II de España</title>
+    <link rel="stylesheet" href="Estilos/Ejercicio18.css">
+  </head>
+  <body>
+    <div id="contenedor">
+      <h2>Felipe II de España</h2>
+      <div id="botones">
+        <div class="etiqueta">Tamaño del texto</div>
+        <button id="pordefecto">Por defecto</button>
+        <button id="grande">Aumentar</button>
+        <button id="pequeño">Disminuir</button>
+      </div>
+      <div class="texto">
+        <p>Felipe II de España, llamado «el Prudente» (Valladolid, 21 de mayo de 1527-San Lorenzo de El Escorial, 13 de septiembre de 1598), fue rey de Españah​ desde el 15 de enero de 1556 hasta su muerte, de Nápoles y Sicilia desde 1554 y de Portugal y los Algarves —como Felipe I— desde 1580, realizando la tan ansiada unión dinástica que duró sesenta años. Fue asimismo rey de Inglaterra e Irlanda iure uxoris, por su matrimonio con María I, entre 1554 y 1558.</p>
+        <p>Hijo y heredero de Carlos I de España e Isabel de Portugal, hermano de María de Austria y Juana de Austria, nieto por vía paterna de Juana I de Castilla y Felipe I de Castilla y de Manuel I de Portugal y María de Aragón por vía materna; murió el 13 de septiembre de 1598 a los setenta y un años de edad, en el monasterio de San Lorenzo de El Escorial, para lo cual fue llevado desde Madrid en una silla-tumbona fabricada para tal fin.</p>
+        <a href="#" id="mas">Leer mas</a>
+        <p>Desde su muerte fue presentado por sus defensores como arquetipo de virtudes, y por sus enemigos como una persona extremadamente fanática y despótica. Esta dicotomía entre la leyenda blanca o rosa y leyenda negra fue favorecida por su propio accionar, ya que se negó a que se publicaran biografías suyas en vida y ordenó la destrucción de su correspondencia.</p>
+        <p>Su reinado se caracterizó por la exploración global y la expansión territorial a través de los océanos Atlántico y Pacífico. Con Felipe II, la monarquía española llegó a ser la primera potencia de Europa y el Imperio español alcanzó su apogeo. Fue el primer imperio de ámbito mundial. Por primera vez en la historia, un imperio integraba territorios de todos los continentes habitados.</p>
+      </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+      $("p").eq(2).css({'border':'black 1px solid','padding':'1%'});
+      $("p:eq(3),p:eq(1)").hide();
+
+      //Cambiaremos el tamnio de la fuente------funciones
+      var fuente=$(".texto").css("font-size");
+      var nuevaFuente=parseFloat(fuente,10);
+
+      $("#grande").mousedown(function(){
+        nuevaFuente++;
+        $(".texto").css({'font-size':nuevaFuente});
+      });
+      $("#pequeño").mousedown(function(){
+        nuevaFuente--;
+        $(".texto").css({'font-size':nuevaFuente});
+      });
+      $("#pordefecto").mousedown(function(){
+        $(".texto").css({'font-size':'20px'});
+      });
+
+      //Mostraremos los parrafos al presionar Leer mas y cambio a Leer menos
+
+      $("a").mousedown(function(){
+      if(this.id=="mas"){
+        $("p:eq(3),p:eq(1)").show("slow");
+        $("a").html("Leer menos");
+        $("a").attr("id","menos");
+      }
+      else if(this.id=="menos"){
+        $("p:eq(3),p:eq(1)").hide("slow");
+        $("a").html("Leer mas");
+        $("a").attr("id","mas");
+      }
+      });
+
+      //Mostraremos el cuarto parrafo con fondo gris y ocultaremos el tercero
+
+      $("p:eq(2)").mousedown(function(){
+        $("p:eq(2)").hide("slow");
+        $("p:eq(3)").show("slow");
+        $("p:eq(3)").css({'background-color':'grey'});
+      });
+
+      //Cambiaremos la posicion de la botonera y le daremos color de fondo rojo
+      $("#botones").mousedown(function(){
+        $("#botones").css({'margin-left':'75%','background-color':'red'});
+      })
+    });
+</script>
+  </body>
+</html>

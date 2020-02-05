@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilos/Ejercicio20.css">
+</head>
+<body>
+    <div id="ej1">
+        <ul id="menu">  
+            <li id="l1"> Hypertext Markup Languaje
+                <ul> 
+                    <li>-HTML1</li> 
+                    <li>-HTML2</li> 
+                    <li>-HTML3</li> 
+                    <li>-HTML4</li>
+                    <li>-HTML5</li>  
+                </ul>
+            </li>
+            <li id="l2">Cascading Style Sheet 
+                <ul> 
+                    <li>-CSS1</li> 
+                    <li>-CSS2</li> 
+                    <li>-CSS3</li> 
+                </ul> 
+            </li> 
+            <li id="l3">Javascript
+                <ul> 
+                    <li>-Version 1</li> 
+                    <li>-Version 2</li> 
+                </ul> 
+            </li> 
+        </ul>
+    </div>
+    <div id="ej2">
+        <div id="caja">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque dignissimos minima voluptas inventore illo? Aperiam dolorem illo minus dicta.</p>
+            <img src="Imagenes/tapa.jpg" alt="">
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('li:has(ul)') // elementos de lista (<li>) que contienen una lista anidada (<ul>) 
+        .click(function(){ 
+            if ($(this).children().is(':hidden')) { 
+                $(this).css('list-style-image','url(menos.gif)')
+                .children().show();
+                $(this).css({'background-color':'blue'});
+            } else if($(this).children().is(':visible')){ 
+                $(this).css('list-style-image','url(mas.gif)') 
+                .children().hide();
+                $(this).css({'background-color':'cadetblue'});
+            } 
+            return false; 
+        }) 
+        .css('cursor','pointer') 
+        .click(); 
+        $('li:not(:has(ul))').css({'cursor': 'default', 'list-style-image':'none'}); 
+//Cojeremos las cajas y haremos que se vaya ejecutando la nimacion de imagen afuera imagen adentro //
+        $("#caja").mouseover(function(){
+            $("#caja>img").animate({"left": "100%"},"slow", "linear");
+        });
+
+        $("#caja").mouseleave(function(){
+            $("#caja>img").animate({"left": "0%"},"slow", "linear");
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Ejercicio_2_1</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <main>
+            <section id="b1" class="b1"><button onclick="IntroducirNumeroBaseDiez()">Introducir número en base 10</button></section>
+            <section id="b2" class="b2"><button onclick="CombertirBinario(n)">Combertir a binario</button></section>
+            <section id="b3" class="b3"><button onclick="CombertirOctal(n)">Combertir a octal</button></section>
+            <section id="b4" class="b4"><button onclick="CombertirHexadecimal(n)">Combertir a hexadecimal</button></section>
+            <table border="1">
+                <caption>Conbersion de tipos</caption>
+                <tr>
+                    <th>Decimal</th>
+                    <th>Binario</th>
+                    <th>Octal</th>
+                    <th>Hexadeciamal</th>
+                </tr>
+                <tr>
+                    <td><p id="decimal" class="decimal"></p></td>
+                    <td><p id="binario" class="binario"></p></td>
+                    <td><p id="octal" class="octal"></p></td>
+                    <td><p id="hexadecimal" class="hexadecimal"></p></td>
+                </tr>
+            </table>
+        </main>
+        <script>
+            var n;
+
+            function IntroducirNumeroBaseDiez(){
+                n=parseInt(prompt("Introduzca un numero en base 10"));
+                document.getElementById('decimal').innerHTML=n;
+            }
+
+            function CombertirBinario(n){
+                var binario;
+                
+                binario=n.toString(2);
+                document.getElementById('binario').innerHTML=binario;
+            }
+
+            function CombertirOctal(n){
+                var octal;
+
+                octal=n.toString(8);
+                document.getElementById('octal').innerHTML=octal;
+            }
+
+            function CombertirHexadecimal(n){
+                var hexadecimal;
+
+                hexadecimal=n.toString(16);
+                document.getElementById('hexadecimal').innerHTML=hexadecimal;
+            }
+ 
+        </script>
+    </body>
+</html>

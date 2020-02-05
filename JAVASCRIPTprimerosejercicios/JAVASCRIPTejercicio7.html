@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var n_intro;
+            var n_adiv=Math.floor(Math.random()*101);;
+            var intentos=10;
+           
+
+           
+
+            for(var i=0;i<intentos;i++){
+                  n_intro=parseInt(prompt("Introduzca un numero (le quedan "+(10-i)+" intentos)"));
+
+                if(n_intro<n_adiv){
+                    alert("Lo sentimos te has quedado corto");
+                }
+                else if(n_intro>n_adiv){
+                    alert("Lo sentimos te has pasado");
+                }
+                else{
+                    break;
+                }
+            }
+                document.write("Enorabuena has acertado!!");
+        </script>
+    </body>
+</html>

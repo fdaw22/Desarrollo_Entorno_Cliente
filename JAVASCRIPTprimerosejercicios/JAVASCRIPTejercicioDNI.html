@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var dni_n, resto;
+            var dni_l;
+            var tabla=['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+
+            dni_n=prompt("Introduce el numero porfavor");
+            dni_l=prompt("Introduce la letra de tu dni");
+            
+            if(dni_n.length == 8 && dni_l.length == 1){
+                resto=parseInt(dni_n,10)%23;
+                for(var i=0; i<tabla.length; i++){
+                    if(resto==i && dni_l.toUpperCase() == tabla[i]){
+                        document.write("Tu dni "+dni_n+" con letra "+dni_l+" es correcto");
+                    }
+                }
+            }
+        
+            else if(dni_n.toString().length != 8 && dni_l.length != 1){
+                document.write("La longitud del numero de tu dni o de la letra del mismo no es correcta");
+            }
+            else{
+                document.write("Tu dni "+dni_n+" con letra "+dni_l+" es incorrecto");
+            }
+        </script>
+    </body>
+</html>

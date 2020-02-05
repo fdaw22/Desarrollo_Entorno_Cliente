@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla</title>
+</head>
+<body>
+    <script>
+        var aTabla=[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+        var num;
+        var totalFila=0;
+        var totalCol=0;
+        var dibuTabla;
+        // pido doce números al usuario (para 3 filas de 4 columnas)
+        for(var fila=0;fila<3;fila++){
+            for(var col=0;col<4;col++){
+                num=parseInt(prompt("Tecla un número " + fila +"-" +col));
+                //aprovecho para totalizar filas
+                totalFila+=num;
+                aTabla[fila][col]=num;
+            }  
+            //añado total de fila en última columna
+            console.log("total fila:"+totalFila);
+            aTabla[fila][4]=totalFila;
+            totalFila=0;
+        }
+        //totalizo columnas
+        for(var col=0;col<5;col++){
+            for(var fila=0;fila<3;fila++){
+                totalCol+= aTabla[fila][col];
+            }
+            //añado total de columan en la última fila 
+            aTabla[3][col]=totalCol;
+            console.log("total col:"+totalCol);
+            totalCol=0;
+        }
+        // dibujo tabla en la variable de texto dibuTabla
+        //abro tabla
+        dibuTabla="<table border=1>";
+        // recorro todo el array
+        for(var fila=0;fila<4;fila++){
+            //abro fila
+            dibuTabla+="<tr>";
+            for(var col=0;col<5;col++){
+                //abro celda, meto valor, cierro celda
+               dibuTabla+="<td>"+aTabla[fila][col]+"</td>";
+            }  
+            // cierro fila
+            dibuTabla+="</tr>";
+        }
+        //cierro tabla
+        dibuTabla+="</table>";
+        // lanzo tabla
+        document.write(dibuTabla);
+    </script>
+ </body>
+</html>

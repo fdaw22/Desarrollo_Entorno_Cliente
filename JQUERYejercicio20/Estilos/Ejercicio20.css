@@ -1,0 +1,79 @@
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#menu>li{
+    background-color: blueviolet;
+}
+ul{
+    background-color: white;
+}
+body #ej1{
+    width: 100%;
+    height: 450px;
+    margin: 0%;
+    padding: 2%;
+}
+
+body #ej1 #menu{
+    width: 10%;
+    height: 60%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body #ej1 #menu >li{
+    width: 100%;
+    border: rgb(131, 27, 27) 1px solid;
+    text-decoration: none;
+    background-color: cadetblue;
+}
+li{
+    list-style: none;
+}
+body #ej1 #menu >ul{
+    width: 79%;
+}
+.submenu{
+    width: 100%;
+    background-color: coral;
+    border: rgb(131, 27, 27) 1px solid;
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+
+#ej2{
+    width: 100%;
+    height: 450px;
+
+    margin: 0%;
+    padding: 2%;
+}
+
+#ej2 #caja{
+    width: 20%;
+    height: 20%;
+/*estamos dando posicion relativa a el contenedor de la imagen y el texto*/
+    position: relative;
+    margin: 0%;
+    padding: 1%;
+    border: black 1px solid;
+}
+
+#ej2 #caja img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+/*posicion absoluta para la imagen */
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+}
+#ej2 #caja p{
+    z-index: -1;
+}

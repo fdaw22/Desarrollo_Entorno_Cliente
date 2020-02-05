@@ -1,0 +1,39 @@
+<!doctype html>  
+<html lang="es">  
+<head>  
+<meta charset="utf-8">  
+<title>jQuery</title>  
+</head>  
+<body>  
+<ul>  
+    <li>Ítem 1</li>  
+    <li>Ítem 2</li>  
+    <li>Ítem 3</li>  
+    <li>Ítem 4</li>  
+    <li>Ítem 5</li>  
+</ul>  
+<p><a href="#" id="add">Añadir un ítem</a></p>  
+<p><a href="#" id="remove">Eliminar un ítem</a></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+   $(document).ready(function(){
+        var longitud=$("li").length;
+
+        $("#add").mousedown(function(){
+            var elemento=document.createElement("li");
+            var indice=longitud+1;
+            var texto= document.createTextNode("Ítem "+indice);
+            elemento.appendChild(texto);
+
+            $("li:last").after(elemento);
+            longitud++;
+        });
+
+        $("#remove").mousedown(function(){
+            $("li:last").remove();
+            longitud--;
+        });
+   });
+</script>  
+</body>  
+</html>

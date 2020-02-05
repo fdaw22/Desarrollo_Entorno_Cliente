@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto</title>
+    <link rel="stylesheet" type="text/css" href="../Estilos/Normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Estilos/Estilo2.css">
+    <link rel="icon" type="image/png" href="../Imagenes/GTS .ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="he1" class="he1">
+            <img src="../Imagenes/GTS.png" alt="Logotipo de GTS">
+        </div>
+    <div id="he2" class="he2">
+        <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Anuncios</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+    </header>
+
+    <section id="t1" class="t1">
+        <h1>Contacto</h1>
+    </section>
+
+    <section id="s1" class="s1">
+        <img src="../Imagenes/Nissan200sx.jpg" alt="Imagen de una carretera">
+    </section>
+
+    <section id="t2" class="t2">
+        <h1>Llena el Formulario de Contacto</h1>
+    </section>
+
+    <main>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Informacion Personal</legend>
+                <br>
+                Nombre: <br>
+                <input type="text" name="nombre" value="Tu nombre"><br><br>
+                E-mail: <br>
+                <input type="email" name="email" value="Tu email"><br><br>
+                Teléfono: <br>
+                <input type="tel" name="telefono" value="Tu teléfono"><br><br>
+                Mensaje: <br>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Informacion sobre Articulo</legend>
+                <br>
+                Vende o Compra: <br>
+                <input list="select" name="select" value="--Seleccione--">
+                <datalist id="select">
+                    <option value="Vender">
+                    <option value="Comprar">
+                </datalist>
+                <br><br>
+                Presupuesto: <br>
+                <input type="number" name="presupuesto">
+            </fieldset>
+            <fieldset>
+                <legend>Contacto</legend>
+                <br>
+                Como desea ser Contactado: <br><br>
+                <input type="radio" name="contact" value="tel">&nbsp;Teléfono <br><br>
+                <input type="radio" name="contact" value="email">&nbsp;Correo <br><br>
+                Si eligio Teléfono, eliga Fecha y Hora <br><br>
+                Fecha: <br>
+                <input type="date" name="fecha"><br><br>
+                Hora: <br>
+                <input type="time" name="hora"><br><br><br>
+                <input id="boton" type="submit">
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <nav id="navegador2" class="navegador2">
+            <ul>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Anuncios</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <address>Todos Los Derechos Reservados&copy;</address>
+    </footer>
+</body>
+</html>

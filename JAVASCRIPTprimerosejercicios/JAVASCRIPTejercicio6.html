@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var array = new Array(4);
+        var sumf=0, sumc=0;
+        var numero;
+        for(var i= 0; i<array.length; i++){
+            array[i]= new Array(5);
+        }
+
+        for(var i = 0; i< 3; i++){
+            for(var j = 0 ; j<4; j++){
+                numero=parseInt(prompt("Introduzca un numero"));
+                array[i][j]=numero;
+                sumf+=numero;
+            }
+            console.log('Total Filas'+sumf);
+            array[i][4]=sumf;
+            sumf=0;
+        }
+
+        for(var j=0;j<4;j++){
+            for(var i=0;i<3;i++){
+                sumc+=array[i][j];
+            }
+            array[3][j]=sumc;
+            console.log('Total columnas'+sumc);
+            sumc=0;
+        }
+//Recoremos tanto las ultimas filas y las ultimas columnas acumulandolas en una variable por separado y se la niadiremos a el ultimo hueco
+        var sumuf=0, sumuc=0;
+        for(var j=0;j<4;j++){
+            sumuf+= array[3][j];
+        }
+
+        for(var i=0;i<3;i++){
+            sumuc+= array[i][4];
+        }
+
+        array[3][4]=(sumuf+sumuc);
+      //  alert(array[3][4]);
+        var dtabla="<table border=1>";
+        for(var i=0; i<4;i++){
+            dtabla+="<tr>";
+            for(var j = 0 ; j<5;j++){
+                dtabla+="<td>"+array[i][j]+"</td>";
+            }
+            dtabla+="</tr>";
+        }
+        dtabla+="</table>";
+
+        document.write(dtabla);
+        //for(var i=0;)
+        //document.write(array);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

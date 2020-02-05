@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="media"></p>
+        <script>
+            var acumulador=0;
+            var num;
+            var i=0;
+
+            num=parseInt(prompt("Introduca un numero"));
+
+            while(num != 0){
+                acumulador+=num;
+                num=parseInt(prompt("Introduca un numero"));
+                i++;
+            }
+
+            document.getElementById("media").innerHTML=acumulador/i;
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedores{
+    width: 1316px;
+    height: 460px;
+    border: black 3px solid;
+    box-sizing: border-box;
+    
+}
+
+.barra{
+    width: 200px;
+    height: 200px;
+    background: purple;
+    position: absolute;
+    margin: 0;
+
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.indicador1{
+    width: 33.3%;
+    height: 100%;
+
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.indicador2{
+    width: 33.3%;
+    height: 100%;
+
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+

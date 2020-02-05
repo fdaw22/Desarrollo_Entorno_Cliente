@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <script>
+            var aTabla=[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];/** Un array de 4*5 */
+            var numero;
+            var sumf=0,sumc=0;
+            var dibuTabla;
+            //calcularemos total filas recorriendo las filas
+            for(var i=0;i<3;i++){
+                for(var j=0;j<4;j++){
+                    numero=parseInt(prompt("Introduzca un numero "+i+"-"+j));
+                    //Aprovecho para totalizar los numeros por  filas
+                    sumf+=numero;
+                    aTabla[i][j]=numero;
+                    
+                }
+                //aniade el numero en la ultima fila de la celda
+                console.log("TOTAL FILA:"+sumf);
+                aTabla[i][4]=sumf;
+                sumf=0;
+            }
+
+            //calculamos el total columnas recorriendo columnas
+    
+            for(var j=0;j<5;j++){
+                for(var i=0;i<3;i++){
+                    sumc+= aTabla[i][j];
+                }
+                //aniade total de la columna en la ultima fila
+                aTabla[3][j]=sumc;
+                console.log("TOTAL COLUMNAS:"+sumc);
+                sumc=0;
+            }
+
+            var dibuTabla="<table border=1>";
+            for(var i=0;i<4;i++){
+                dibuTabla+="<tr>";
+                for(var j=0;j<5;j++){
+                    dibuTabla+="<td>"+aTabla[i][j]+"</td>";
+                }
+                dibuTabla+="</tr>"
+            }
+            dibuTabla+="</table>";
+
+            document.write(dibuTabla);
+        </script>
+    </body>
+</html>

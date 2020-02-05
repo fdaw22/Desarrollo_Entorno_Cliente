@@ -1,0 +1,27 @@
+<!doctype html>  
+<html lang="es">  
+<head>  
+<meta charset="utf-8">  
+<title>jQuery</title>  
+<style>  
+    .externa { 
+        border: none;  
+        margin-left: 10px;
+    }  
+</style>  
+</head>  
+<body>  
+<p><a href="https://www.educastur.es/" title="Enlace externo">Consejería de Educación de Asturias</a></p>  
+<p><a href="#">Enlace interno</a></p>  
+<p><a href="#">Enlace interno</a></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var imagen=document.createElement("img");
+        imagen.setAttribute("src","externa.png");
+        $("a").eq(0).after(imagen);
+        //$('a').eq(0).after("<img src='externa.png'>"); tambien funciona
+    });
+</script>
+</body>  
+</html>

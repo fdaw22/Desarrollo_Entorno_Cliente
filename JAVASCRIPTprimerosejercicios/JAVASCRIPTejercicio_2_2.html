@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Ejercicio_2_2</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <main>
+            <section id="s1" class="s1"><button onclick="IntroduceNumBinario()">Introduce numero Binario</button></section>
+            <section id="s2" class="s2"><button onclick="IntroduceNumOctal()">Introduce numero Octal</button></section>
+            <section id="s3" class="s3"><button onclick="IntroduceNumHexadecimal()">Introduce numero Hexadecimal</button></section>
+            <section id="s4" class="s4"><button onclick="CombierteDecimal(n, tipo_numero)">Numero decimal</button></section>
+            <table border="1">
+                    <caption>Conbersion de tipos</caption>
+                    <tr>
+                        <th>Numero Introducido</th>
+                        <th>En base decimal</th>
+                    </tr>
+                    <tr>
+                        <td><p id="intronum" class="intronum"></p></td>
+                        <td><p id="decimal" class="decimal"></p></td>
+                    </tr>
+                </table>
+        </main>
+        <script>
+            var n,tipo_numero;
+
+            function IntroduceNumBinario(){
+                n=prompt("Introduce numero en Binario");
+                tipo_numero=1;
+                document.getElementById('intronum').innerHTML=n;
+            }
+
+            function IntroduceNumOctal(){
+                n=prompt("Introduce numero en Octal");
+                tipo_numero=2;
+                document.getElementById('intronum').innerHTML=n;
+            }
+
+            function IntroduceNumHexadecimal(){
+                n=prompt("Introduce numero en Decimal").toUpperCase();
+                tipo_numero=3;
+                document.getElementById('intronum').innerHTML=n;
+            }
+
+            function CombierteDecimal(n,tipo_numero){
+                if(tipo_numero==1){
+                    document.getElementById('decimal').innerHTML=parseInt(n,2);
+                }
+                else if(tipo_numero==2){
+                    document.getElementById('decimal').innerHTML=parseInt(n,8);
+                }
+                else if(tipo_numero==3){
+                    document.getElementById('decimal').innerHTML=parseInt(n,16);
+                }
+                else{
+                    alert("El numero introducido no corresponde a ninguno de los tres tipos o esta vacio");
+                }
+            }
+        </script>
+    </body>
+</html>

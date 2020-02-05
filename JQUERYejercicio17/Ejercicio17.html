@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilos/Ejercicio17.css">
+</head>
+<body>
+    <!--Ejercicio 1-->
+    <div id="ej1">
+        <ul id="menu">
+            <li class="menu1">Menu Item 1</li>
+            <li class="menu1">Menu Item 2</li>
+            <li class="menu1">Menu Item 3</li>
+            <li class="menu1">Menu Item 4</li>
+            <li class="menu1">Menu Item 5</li>
+            <li class="menu1">Menu Item 6</li>
+        </ul>
+    </div>
+    <!--Ejercicio 2-->
+    <div id="ej2">
+        <p>Pase el raton por encima del wallpaper para ampliarlo:</p>
+        <img class="img1" src="Imagenes/wallpaper1.png" alt="" >
+        <img class="img1" src="Imagenes/wallpaper2.png" alt="">
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("li").mouseover(function(){
+            $(this).removeClass("menu1");
+            $(this).addClass("menu2");
+        });
+
+        $("li").mouseout(function(){
+            $(this).removeClass("menu2");
+            $(this).addClass("menu1");
+        });
+
+        $("img").mouseover(function(){
+            $(this).removeClass("img1");
+            $(this).addClass("img2");
+        });
+
+        $("img").mouseout(function(){
+            $(this).removeClass("img2");
+            $(this).addClass("img1");
+        });
+    });
+</script>
+</body>
+</html>

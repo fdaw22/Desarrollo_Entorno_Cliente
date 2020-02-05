@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilos/galeria.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="principal">
+            <img id="f1" src="Imagenes/fizquierda.png" alt="">
+            <img id="f2" src="Imagenes/fderecha.png" alt="">
+        </div>  
+        <div id="menu">
+            <h1 id="titulo">1. Cristo (Brasil)</h1>
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+            <div id="c4"></div>
+            <div id="c5"></div>
+            <div id="c6"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var imagen=0;
+    $(document).ready(function(){
+        function cambiarImagen(){
+
+            imagen=imagen+1;
+
+            switch(this.imagen){
+                case 1:
+                $("#contenedor").css("background","url('Imagenes/china.jpg')");
+                $("h1").html("2. La Gran Muralla China(China)");
+                $("#c1").css("background", "white");
+                $("#c2").css("background", "orangered");
+                $("#c3").css("background", "white");
+                $("#c4").css("background", "white");
+                $("#c5").css("background", "white");
+                $("#c6").css("background", "white");
+                break;
+               case 2:
+                $("#contenedor").css("background","url('Imagenes/itza.jpg')");
+                $("h1").html("3. Chichen Itza (Itza)");
+                $("#c1").css("background", "white");
+                $("#c2").css("background", "white");
+                $("#c3").css("background", "orangered");
+                $("#c4").css("background", "white");
+                $("#c5").css("background", "white");
+                $("#c6").css("background", "white");
+                break;
+               case 3:
+                $("#contenedor").css("background","url('Imagenes/machupichu.jpg')");
+                $("h1").html("4. Ciudad de Machupichu (Machupichu)");
+                $("#c1").css("background", "white");
+                $("#c2").css("background", "white");
+                $("#c3").css("background", "white");
+                $("#c4").css("background", "orangered");
+                $("#c5").css("background", "white");
+                $("#c6").css("background", "white");
+                break;
+               case 4:
+                $("#contenedor").css("background","url('Imagenes/petra.jpg')");
+                $("h1").html("5. Templo de Petra(Jordania)");
+                $("#c1").css("background", "white");
+                $("#c2").css("background", "white");
+                $("#c3").css("background", "white");
+                $("#c4").css("background", "white");
+                $("#c5").css("background", "orangered");
+                $("#c6").css("background", "white");
+                break;
+               case 5:
+                $("#contenedor").css("background","url('Imagenes/roma.jpg')");
+                $("h1").html("6. Coliseo de Roma (Roma)");
+                $("#c1").css("background", "white");
+                $("#c2").css("background", "white");
+                $("#c3").css("background", "white");
+                $("#c4").css("background", "white");
+                $("#c5").css("background", "white");
+                $("#c6").css("background", "orangered");
+                break;
+                case 6:
+                $("#contenedor").css("background","url('Imagenes/brasil.jpg')");
+                $("h1").html("1. Cristo (Brasil)");
+                $("#c1").css("background", "orangered");
+                $("#c2").css("background", "white");
+                $("#c3").css("background", "white");
+                $("#c4").css("background", "white");
+                $("#c5").css("background", "white");
+                $("#c6").css("background", "white");
+                imagen=0;
+                break;
+                }
+            }
+        setInterval(cambiarImagen,5000);
+        
+        $("#c1").mousedown(function(){
+            $("#contenedor").css("background","url('Imagenes/brasil.jpg')");
+            $("h1").html("1. Cristo (Brasil)");
+            $("#c1").css("background", "orangered");
+            $("#c2").css("background", "white");
+            $("#c3").css("background", "white");
+            $("#c4").css("background", "white");
+            $("#c5").css("background", "white");
+            $("#c6").css("background", "white");
+            imagen=5;          
+        });
+        $("#c2").mousedown(function(){
+            $("#contenedor").css("background","url('Imagenes/china.jpg')");
+            $("h1").html("2. La Gran Muralla China(China)");
+            $("#c1").css("background", "white");
+            $("#c2").css("background", "orangered");
+            $("#c3").css("background", "white");
+            $("#c4").css("background", "white");
+            $("#c5").css("background", "white");
+            $("#c6").css("background", "white");
+            imagen=0;          
+        });
+        $("#c3").mousedown(function(){
+            $("#contenedor").css("background","url('Imagenes/itza.jpg')");
+            $("h1").html("3. Chichen Itza (Itza)");
+            $("#c1").css("background", "white");
+            $("#c2").css("background", "white");
+            $("#c3").css("background", "orangered");
+            $("#c4").css("background", "white");
+            $("#c5").css("background", "white");
+            $("#c6").css("background", "white");
+            imagen=1;          
+        });
+        $("#c4").mousedown(function(){
+            $("#contenedor").css("background","url('Imagenes/machupichu.jpg')");
+            $("h1").html("4. Ciudad de Machupichu (Machupichu)");
+            $("#c1").css("background", "white");
+            $("#c2").css("background", "white");
+            $("#c3").css("background", "white");
+            $("#c4").css("background", "orangered");
+            $("#c5").css("background", "white");
+            $("#c6").css("background", "white");
+            imagen=2;          
+        });
+        $("#c5").mousedown(function(){
+            $("#contenedor").css("background","url('Imagenes/petra.jpg')");
+            $("h1").html("5. Templo de Petra(Jordania)");
+            $("#c1").css("background", "white");
+            $("#c2").css("background", "white");
+            $("#c3").css("background", "white");
+            $("#c4").css("background", "white");
+            $("#c5").css("background", "orangered");
+            $("#c6").css("background", "white");
+            imagen=3;          
+        });
+        $("#c6").mousedown(function(){
+            $("#contenedor").css("background","url('Imagenes/roma.jpg')");
+            $("h1").html("6. Coliseo de Roma (Roma)");
+            $("#c1").css("background", "white");
+            $("#c2").css("background", "white");
+            $("#c3").css("background", "white");
+            $("#c4").css("background", "white");
+            $("#c5").css("background", "white");
+            $("#c6").css("background", "orangered");
+            imagen=4;          
+        });
+        /*boton de atras no funciona
+        $("#f1").mousedown(function(){
+            imagen=imagen-1;
+            cambiarImagen();
+        });*/
+        $("#f2").mousedown(function(){
+            cambiarImagen();
+        });
+    });
+</script>
+</body>
+</html>

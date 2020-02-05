@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="IntroduceCadena()">Introducir cadena</button>
+        <p id="cadena" class="cadena"></p>
+    <button onclick="OperacionesCadena()">Informacion cadena</button>
+        <p id="npalabras" class="npalabras"></p>
+        <p id="1palabra" class="1palabra"></p>
+        <p id="UltPalabra" class="UltPalabra"></p>
+        <p id="palabrasAZ" class="palabrasAZ"></p>
+        <p id="palabrasZA" class="palabrasZA"></p>
+
+    <script>
+        var cadena;
+        var arr=[];
+
+        function IntroduceCadena(){
+            cadena=prompt("Introduce una cadena");
+            document.getElementById('cadena').innerHTML="La cadena: "+cadena;
+        }
+
+        function OperacionesCadena(){
+            arr= cadena.split(' ');
+
+            document.getElementById('npalabras').innerHTML="El numero de palabras de la cadena es: "+arr.length;
+            document.getElementById('1palabra').innerHTML="La primera palabra de la cadena es: "+arr[0];
+            document.getElementById('UltPalabra').innerHTML="La ultima palabra de la cadena es: "+arr[arr.length-1];
+            document.getElementById('palabrasAZ').innerHTML="Palabras de la cadena ordenadas de la A-Z: "+arr.sort();
+            document.getElementById('palabrasZA').innerHTML="Palabras de la cadena ordenadas de la Z-A: "+arr.reverse();
+        }
+
+    </script>
+</body>
+</html>

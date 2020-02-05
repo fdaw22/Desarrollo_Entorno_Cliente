@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.contenedores{
+    width: 1316px;
+    height: 460px;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    border: black 3px solid;
+    box-sizing: border-box;
+}
+
+#contenedor2 img{
+    width: 200px;
+    position:relative;
+    display:block;
+}
+
+.relojes{
+    width: 10%;
+    height: 20%;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+section{
+    font-family: "crono";
+    font-size: 2vw;
+}
+@font-face {
+    font-family: "Mystery Quest";
+    src: url("../Fuentes/CaesarDressing-Regular.ttf");
+}
+
+@font-face{
+    font-family: "crono";
+    src: url("../Fuentes/CampGranadaNF.ttf");
+}

@@ -1,0 +1,117 @@
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 7%;
+
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+body #contenedor{
+    width: 1000px;
+    height: 600px;
+    margin: 0%;
+    padding: 0%;
+
+    background-image: url("../Imagenes/brasil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body #contenedor #principal{
+    width: 100%;
+    height: 70%;
+
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#f1, #f2{
+    width: 5%;
+    height: 20%;
+}
+body #contenedor #menu{
+    width: 100%;
+    height: 30%;
+    padding: 3%;
+
+    background-color: black;
+    border-top: 1px white solid;
+    opacity: 0.7;
+    box-sizing: border-box;
+}
+body #contenedor #menu h1{
+    color: white;
+}
+body #contenedor #menu #c1{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    float: left;
+
+    background-color: orangered;
+    border-radius: 50%;
+}
+body #contenedor #menu #c2{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    float: left;
+
+    background-color: grey;
+    border-radius: 50%;
+}
+body #contenedor #menu #c3{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    float: left;
+
+    background-color: grey;
+    border-radius: 50%;
+}
+body #contenedor #menu #c4{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    float: left;
+
+    background-color: grey;
+    border-radius: 50%;
+}
+body #contenedor #menu #c5{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    float: left;
+
+    background-color: grey;
+    border-radius: 50%;
+}
+body #contenedor #menu #c6{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+    float: left;
+
+    background-color: grey;
+    border-radius: 50%;
+}
+
+
+
+
+
