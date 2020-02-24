@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navegacion',
-  templateUrl: './navegacion.component.html'
+  templateUrl: './navegacion.component.html',
+  styleUrls: ['./navegacion.component.css']
 })
 export class NavegacionComponent {
   title = 'Ejercicio26Instituto';
