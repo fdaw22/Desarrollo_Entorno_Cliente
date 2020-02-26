@@ -11,6 +11,7 @@ import { InicioComponent } from 'src/COMPONENTES/INICIO/inicio.component';
 import { NavegacionComponent } from 'src/COMPONENTES/NAVEGACION/navegacion.component';
 import { PaginaNotFoundComponent } from 'src/COMPONENTES/PAGINANOTFOUND/paginanotfound.component';
 import { PieComponent } from 'src/COMPONENTES/PIE/pie.component';
+import { CiclosComponent } from 'src/COMPONENTES/CICLOS/ciclos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PieComponent } from 'src/COMPONENTES/PIE/pie.component';
     InicioComponent,
     NavegacionComponent,
     PaginaNotFoundComponent,
-    PieComponent
+    PieComponent,
+    CiclosComponent
   ],
   imports: [
     BrowserModule,
