@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DepartamentosService } from 'src/app/SERVICIOS/departamentos.service';
+import {Ciclo} from '../../app/MODELOS/ciclo.mode';
+import { CICLOS } from '../mocks';
 
 @Component({
   selector: 'app-ciclos',
@@ -14,6 +16,7 @@ export class CiclosComponent {
   auxiliar:any [];
   deptnoFinal:any [];
   ciclosFinal:any[];
+  ciclo: Ciclo;
   constructor(private _route: ActivatedRoute, private departamentoServicio: DepartamentosService){
     this.id=this._route.snapshot.paramMap.get('id');
     alert(this.departamentoServicio.departamentos);
@@ -22,12 +25,7 @@ export class CiclosComponent {
   }
 
   ngOnInit() {
-    for(var i=0;i<this.auxiliar.length;i++){
-      if(this.auxiliar[i].id==this.id){
-        this.deptnoFinal.push.apply(this.auxiliar[i]);
-        //alert(this.deptnoFinal[i].ciclos);
-      }
-    }
+    this.ciclo = Ciclo.find(item => item.id === id);
   }
 
 
