@@ -12,6 +12,8 @@ import { NavegacionComponent } from 'src/COMPONENTES/NAVEGACION/navegacion.compo
 import { PaginaNotFoundComponent } from 'src/COMPONENTES/PAGINANOTFOUND/paginanotfound.component';
 import { PieComponent } from 'src/COMPONENTES/PIE/pie.component';
 import { CiclosComponent } from 'src/COMPONENTES/CICLOS/ciclos.component';
+import { AulasdeparComponent } from 'src/COMPONENTES/AULASDEPAR/aulasdepar.component';
+import { ProfesdepartComponent } from 'src/COMPONENTES/PROFESDEPART/profesdepart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CiclosComponent } from 'src/COMPONENTES/CICLOS/ciclos.component';
     NavegacionComponent,
     PaginaNotFoundComponent,
     PieComponent,
-    CiclosComponent
+    CiclosComponent,
+    AulasdeparComponent,
+    ProfesdepartComponent
   ],
   imports: [
     BrowserModule,

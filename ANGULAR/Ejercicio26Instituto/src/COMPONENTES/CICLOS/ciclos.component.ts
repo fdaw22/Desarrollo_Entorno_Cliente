@@ -16,6 +16,7 @@ export class CiclosComponent {
   
   constructor(private route: ActivatedRoute){
     this.id=this.route.snapshot.paramMap.get('id');
+    //alert(this.id);
   }
 
   ngOnInit() {
