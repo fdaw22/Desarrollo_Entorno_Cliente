@@ -15,6 +15,7 @@ const routes: Routes = [
   {path:'Familias',component: FamiliasComponent},
   {path:'Ciclos/:id',component: CiclosComponent,
   children:[
+    { path: '', redirectTo: 'prof', pathMatch: 'full' },
     {path:'prof',component:ProfesdepartComponent, outlet: 'profaula'},
     {path:'aula',component:AulasdeparComponent, outlet: 'profaula'}
   ]},
@@ -25,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
