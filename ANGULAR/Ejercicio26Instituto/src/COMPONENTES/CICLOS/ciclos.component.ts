@@ -20,7 +20,6 @@ export class CiclosComponent {
   }
 
   ngOnInit() {
-
     this.ciclo = CICLOS.find(item => item.id === this.id);
   }
 
