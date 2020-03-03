@@ -15,9 +15,8 @@ const routes: Routes = [
   {path:'Familias',component: FamiliasComponent},
   {path:'Ciclos/:id',component: CiclosComponent,
   children:[
-    { path: '', redirectTo: 'prof', pathMatch: 'full' },
-    {path:'prof',component:ProfesdepartComponent, outlet: 'profaula'},
-    {path:'aula',component:AulasdeparComponent, outlet: 'profaula'}
+    {path:'prof',component:ProfesdepartComponent},
+    {path:'aula',component:AulasdeparComponent}
   ]},
   {path:'**', component:PaginaNotFoundComponent}
 ];
