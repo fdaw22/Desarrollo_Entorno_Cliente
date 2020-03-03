@@ -1,1 +1,14 @@
-<h1>JAJJAJJAAJ</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of ciclo.aulas">
+        <th scope="row" class="align-middle" >{{i.nombre}}</th>
+        <td><img width="100" height="100" src="{{i.imagen}}" alt=""></td>
+      </tr>
+    </tbody>
+</table>
