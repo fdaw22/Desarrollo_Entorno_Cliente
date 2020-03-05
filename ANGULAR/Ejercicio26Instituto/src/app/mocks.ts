@@ -6,7 +6,7 @@ export const CICLOS: Ciclo[] = [{id:"001",nombre:"Administracion y gestion",desc
                                             {id:"TGA",nombre:"Técnico en Gestión Administrativa"}], 
                                                 prof: [{nombre:"Juan Ramon Garcia", imagen:"../../assets/img/juan_elloco.jpg",nacimiento:new Date(1999,3,12),salario:1350.45},
                                                        {nombre:"Hugo Vinculante Rodriguez", imagen:"../../assets/img/hugo_Folleti.jpg",nacimiento:new Date(1980,1,22),salario:2000.4}], 
-                                                aulas:[{nombre:"aula de administración numero 9",imagen:"../../assets/img/aula_administracion.jpg"}]},
+                                                aulas:[{nombre:"aula de administracion numero 9",imagen:"../../assets/img/aula_administracion.jpg"}]},
 
 
                                 {id:"002",nombre:"Edificacion y obra civil",descripcion:"Abarca las actividades de construcción de edificios tanto residenciales como no residenciales y la construcción de infraestructuras de transporte, urbanismo…etc.", imagen:"../../assets/img/edificacion_obra_civil.jpg", 
