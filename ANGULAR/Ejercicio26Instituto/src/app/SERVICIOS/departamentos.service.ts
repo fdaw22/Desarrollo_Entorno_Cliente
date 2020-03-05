@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{Ciclo} from '../ciclo.mode';
+import{Ciclo} from '../MODELOS/ciclo.mode';
 
 @Injectable({
   providedIn: 'root'

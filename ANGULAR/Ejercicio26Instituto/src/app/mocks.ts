@@ -1,4 +1,4 @@
-import { Ciclo } from '../app/ciclo.mode';
+import { Ciclo } from './MODELOS/ciclo.mode';
 
 export const CICLOS: Ciclo[] = [{id:"001",nombre:"Administracion y gestion",descripcion:"Administración y Gestión de Empresas. El objetivo fundamental de estos profesionales es desarrollar, de manera efectiva, tareas de gestión y asesoramiento destinadas a alcanzar el correcto funcionamiento de una empresa u organización", imagen:"../../assets/img/administracion_gestion.jpg", 
                                     ciclos:[{id:"TAF",nombre:"Técnico Superior en Administración y Finanzas"},

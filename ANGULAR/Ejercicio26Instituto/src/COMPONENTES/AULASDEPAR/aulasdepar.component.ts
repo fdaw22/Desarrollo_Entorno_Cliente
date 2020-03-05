@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Ciclo} from '../../app/ciclo.mode';
+import {Ciclo} from '../../app/MODELOS/ciclo.mode';
 import {CICLOS} from '../../app/mocks';
 
 @Component({
