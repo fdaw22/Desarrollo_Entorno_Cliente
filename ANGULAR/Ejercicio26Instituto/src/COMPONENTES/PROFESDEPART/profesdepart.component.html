@@ -3,12 +3,16 @@
       <tr>
         <th scope="col">Nombre</th>
         <th scope="col">Foto</th>
+        <th scope="col">Nacimiento</th>
+        <th scope="col">Salario</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let i of ciclo.prof">
         <th scope="row" class="align-middle" >{{i.nombre}}</th>
         <td><img width="100" height="100" src="{{i.imagen}}" alt=""></td>
+        <td class="align-middle">{{i.nacimiento  | date: 'dd/MM/yyyy'}}</td>
+        <td class="align-middle">{{i.salario}}</td>
       </tr>
     </tbody>
   </table>

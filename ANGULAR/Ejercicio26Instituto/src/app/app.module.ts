@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
+import{registerLocaleData} from '@angular/common';
+import localEs from '@angular/common/locales/es';
 
+registerLocaleData(localEs);
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BuscarComponent } from 'src/COMPONENTES/BUSCAR/buscar.component';
@@ -14,6 +17,7 @@ import { PieComponent } from 'src/COMPONENTES/PIE/pie.component';
 import { CiclosComponent } from 'src/COMPONENTES/CICLOS/ciclos.component';
 import { AulasdeparComponent } from 'src/COMPONENTES/AULASDEPAR/aulasdepar.component';
 import { ProfesdepartComponent } from 'src/COMPONENTES/PROFESDEPART/profesdepart.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,12 @@ import { ProfesdepartComponent } from 'src/COMPONENTES/PROFESDEPART/profesdepart
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:LOCALE_ID,
+      useValue:'es'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
