@@ -13,7 +13,7 @@ export class DepartamentoComponent {
 
   constructor(private departamentoServicio: DepartamentosService){
 
-    this.dep= this.departamentoServicio.departamentos;
+    this.dep= this.departamentoServicio.getDepartamentos();
     //alert(this.dep);
   }
 
