@@ -18,6 +18,7 @@ import { CiclosComponent } from 'src/COMPONENTES/CICLOS/ciclos.component';
 import { AulasdeparComponent } from 'src/COMPONENTES/AULASDEPAR/aulasdepar.component';
 import { ProfesdepartComponent } from 'src/COMPONENTES/PROFESDEPART/profesdepart.component';
 import { from } from 'rxjs';
+import { CapitalizePipe } from './PIPES/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { from } from 'rxjs';
     PieComponent,
     CiclosComponent,
     AulasdeparComponent,
-    ProfesdepartComponent
+    ProfesdepartComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,

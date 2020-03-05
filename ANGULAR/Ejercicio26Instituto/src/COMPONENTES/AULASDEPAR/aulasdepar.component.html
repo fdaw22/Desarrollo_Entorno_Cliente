@@ -7,7 +7,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let i of ciclo.aulas">
-        <th scope="row" class="align-middle" >{{i.nombre}}</th>
+        <th scope="row" class="align-middle" >{{i.nombre | capitalize: false}}</th>
         <td><img width="100" height="100" src="{{i.imagen}}" alt=""></td>
       </tr>
     </tbody>
