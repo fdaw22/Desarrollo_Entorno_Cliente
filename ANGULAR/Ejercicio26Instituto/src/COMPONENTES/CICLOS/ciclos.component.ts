@@ -12,7 +12,7 @@ export class CiclosComponent {
   title = 'Ejercicio26Instituto';
 
   id:any;
-  ciclo: Ciclo;
+  ciclo: Ciclo[];
   
   constructor(private route: ActivatedRoute, private departementoServi:DepartamentosService){
     this.id=this.route.snapshot.paramMap.get('id');
@@ -20,7 +20,9 @@ export class CiclosComponent {
   }
 
   ngOnInit() {
-    this.ciclo = this.departementoServi.getDepartamentos().find(item => item.id === this.id);
+    //this.ciclo = this.departementoServi.getDepartamentos().find(item => item.id === this.id); con metodo find de arrays
+    //this.ciclo = this.departementoServi.getDepartamento(this.id); con metodo normal
+    this.departementoServi.getDepartamento(this.id).subscribe( dpts => this.ciclo= dpts );//con observable
   }
 
 

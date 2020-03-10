@@ -12,19 +12,25 @@ export class DepartamentosService {
 
   }
 
-  departamentos:Ciclo [];
+  departamentos:Ciclo []=CICLOS;
 
-  getDepartamentos():Ciclo []{
+  /*getDepartamentos():Ciclo []{
     this.departamentos=CICLOS;
     return this.departamentos;
-  }
-
-  /*getDepartamentos():<Observable:Ciclo[]>{
-    return of(this.departamentos);
-  }*/
+  } Metodo normal sin observable*/
 
   /*getDepartamento(id:string){
+    parseInt(id);
     this.departamentos=CICLOS[id];
     return this.departamentos;
-  } Preguntar 0J0*/
+  }Metodo normal sin obserbable*/
+
+  getDepartamentos():Observable<Ciclo []> { 
+    return of(this.departamentos); 
+  }//Con obserblable
+
+  getDepartamento(id:string):Observable<Ciclo []> {
+    parseInt(id);
+    return of(this.departamentos[id]); 
+  }
 }

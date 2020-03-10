@@ -13,11 +13,11 @@ export class DepartamentoComponent {
 
   constructor(private departamentoServicio: DepartamentosService){
 
-    this.dep= this.departamentoServicio.getDepartamentos();
+    //this.dep= this.departamentoServicio.getDepartamentos(); con metodos normales sin obserbavle
     //alert(this.dep);
   }
 
   ngOnInit(){
-    
+    this.departamentoServicio.getDepartamentos().subscribe( dpts => this.dep= dpts );//Sucribirse al obserbavle
   }
 }
