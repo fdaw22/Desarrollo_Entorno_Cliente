@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
   title = 'Ejercicio26Instituto';
+  id:string="hola";
+  nombre:string="";
+  descripcion:string="";
+  imagen:string="";
 }

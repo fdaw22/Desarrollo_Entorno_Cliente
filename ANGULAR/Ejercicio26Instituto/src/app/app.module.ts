@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import{registerLocaleData} from '@angular/common';
 import localEs from '@angular/common/locales/es';
@@ -41,7 +43,9 @@ import { FormularioComponent } from 'src/COMPONENTES/FORMULARIO/formulario.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [
     {
