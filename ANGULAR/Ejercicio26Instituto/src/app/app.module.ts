@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { DataTablesModule } from 'angular-datatables';
 
 
 import{registerLocaleData} from '@angular/common';
@@ -50,6 +50,7 @@ import { PaisesComponent } from 'src/COMPONENTES/PAISES/paises.component';
     AppRoutingModule,
     FormsModule,
     CommonModule,
+    DataTablesModule
   ],
   providers: [
     {
