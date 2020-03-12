@@ -3,6 +3,8 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+
+
 import{registerLocaleData} from '@angular/common';
 import localEs from '@angular/common/locales/es';
 
@@ -23,6 +25,7 @@ import { from } from 'rxjs';
 import { CapitalizePipe } from './PIPES/capitalize.pipe';
 import { ListadoComponent } from 'src/COMPONENTES/LISTADO/listado.component';
 import { FormularioComponent } from 'src/COMPONENTES/FORMULARIO/formulario.component';
+import { PaisesComponent } from 'src/COMPONENTES/PAISES/paises.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +42,14 @@ import { FormularioComponent } from 'src/COMPONENTES/FORMULARIO/formulario.compo
     ProfesdepartComponent,
     CapitalizePipe,
     ListadoComponent,
-    FormularioComponent
+    FormularioComponent,
+    PaisesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [
     {

@@ -53,7 +53,7 @@
 
           <!--<button type="submit" [disabled]="!miForm.form.valid" *ngIf="" class="p-3 bg-primary rounded text-white border border-primary">Crear</button>-->
         
-          <button class="btn btn-primary" [disabled]="!miForm.form.valid" *ngIf="ciclo.id else elseBlock">Editar</button>
+          <button class="btn btn-primary" routerLink='/Listado' [disabled]="!miForm.form.valid" *ngIf="ciclo.id else elseBlock">Editar</button>
           <ng-template #elseBlock>
             <button class="btn btn-primary">Crear</button>
           </ng-template>

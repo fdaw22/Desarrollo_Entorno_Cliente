@@ -9,6 +9,7 @@ import { ProfesdepartComponent } from 'src/COMPONENTES/PROFESDEPART/profesdepart
 import { AulasdeparComponent } from 'src/COMPONENTES/AULASDEPAR/aulasdepar.component';
 import { ListadoComponent } from 'src/COMPONENTES/LISTADO/listado.component';
 import { FormularioComponent } from 'src/COMPONENTES/FORMULARIO/formulario.component';
+import { PaisesComponent } from 'src/COMPONENTES/PAISES/paises.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'Listado', component:ListadoComponent,},
   {path:'Formulario',component:FormularioComponent,},
   {path:'Formulario/:id',component:FormularioComponent},
+  {path:'Paises',component:PaisesComponent},
   {path:'**', component:PaginaNotFoundComponent}
 ];
 
