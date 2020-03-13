@@ -1,1 +1,22 @@
-<h1>Esto es pasises</h1>
+<body>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col-10">
+            <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of pais">
+                    <td>{{i.name}}</td>
+                    <td>Foo</td>
+                    <td>Bar</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>

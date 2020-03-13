@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiRestService } from 'src/app/SERVICIOS/api-rest.service';
 
 @Component({
   selector: 'app-paises',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
 })
 export class PaisesComponent {
   title = 'Ejercicio26Instituto';
- 
+  
+  dtOptions: DataTables.Settings = {};
+  pais:any[];
+
+  constructor(private ApiRest:ApiRestService){
+  }
+  ngOnInit(): void {
+    this.dtOptions = {pagingType: 'full_numbers'};
+    this.ApiRest.getAllIdiomas().subscribe(paises => {console.log(paises)});
+    this.ApiRest.getAllIdiomas().subscribe(paises => this.pais=paises);
+    alert(this.pais);
+  }
 }
