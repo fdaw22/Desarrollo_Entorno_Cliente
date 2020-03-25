@@ -1,19 +1,19 @@
 <body>
     <div class="row justify-content-center mt-4 mb-4">
         <div class="col-10">
-            <table datatable [dtOptions]="dtOptions" class="row-border hover">
+          <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>First name</th>
-                    <th>Last name</th>
+                    <th>Name</th>
+                    <th>Spanish Name</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let i of pais">
+                    <td>{{i.alpha3Code}}</td>
                     <td>{{i.name}}</td>
-                    <td>Foo</td>
-                    <td>Bar</td>
+                    <td>{{i.translations.es}}</td>
                   </tr>
                 </tbody>
               </table>
